@@ -1,9 +1,9 @@
 import Image from "next/image";
-import styles from "./postCard.module.css";
+import styles from "./productCard.module.css";
 import Link from "next/link";
 import { ReactElement } from "react";
 
-type Product = {
+export type ProductType = {
   id: number;
   title: string;
   description: string;
@@ -18,30 +18,36 @@ type Product = {
 };
 
 type PropsType = {
-  product: Product;
+  product: ProductType;
 };
 
-const ProductCard = ({ product }: PropsType): ReactElement => {
+export const ProductCard = ({ product }: PropsType): ReactElement => {
   return (
     <div className={styles.container}>
-      <div className="product-card">
+      <div className={styles.imgContainer}>
         <Image
-          className="thumbnail"
+          className={styles.img}
           src={product.thumbnail}
           alt={product.title}
+          fill
         />
-        <div className="product-details">
-          <h2 className="title">{product.title}</h2>
-          <p className="description">{product.description}</p>
-          <p className="price">${product.price}</p>
-          {product.discountPercentage && (
-            <p className="discount">{product.discountPercentage}% off</p>
-          )}
-          {product.rating && <p className="rating">Rating: {product.rating}</p>}
-          <p className="stock">Stock: {product.stock}</p>
-          <p className="brand">Brand: {product.brand}</p>
-          <p className="category">Category: {product.category}</p>
-        </div>
+      </div>
+      <div className={styles.info}>
+        <h2 className={styles.title}>{product.title}</h2>
+
+        <p className={styles.brand}>{product.brand}</p>
+      </div>
+      <div className={styles.wrapperPrice}>
+        {product.discountPercentage ? (
+          <p className={styles.discount}>
+            $
+            {Math.floor(
+              Number(product.price) - Number(product.discountPercentage)
+            )}
+          </p>
+        ) : (
+          <p className={styles.price}>${product.price}</p>
+        )}
       </div>
     </div>
   );

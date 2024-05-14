@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8vh;
+}
+
+.productCard {
+  background-color: rgb(229, 229, 229);
+  border-radius: 3%;
+  height: 50vh;
+  width: 30%;
+}
