@@ -6,6 +6,7 @@ import api from "@/api/products";
 import styles from "./singleProduct.module.css";
 import Image from "next/image";
 import ProductRating from "@/components/rating/ProductRating";
+import { useFetchData } from "@/hooks/useFetchData";
 
 type ParamsType = {
   params: { id: string };
