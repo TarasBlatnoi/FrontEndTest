@@ -32,7 +32,7 @@ const SingleProductPage = ({ params }: ParamsType) => {
       }
     };
     fetchProduct();
-  }, []);
+  }, [id]);
 
   return (
     <div className={styles.container}>

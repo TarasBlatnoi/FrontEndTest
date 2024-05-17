@@ -1,7 +1,5 @@
 "use client";
-import api from "@/api/products";
-import { ProductType, ProductCard } from "@/components/productCard/ProductCard";
-import { useEffect, useState } from "react";
+import { ProductCard } from "@/components/productCard/ProductCard";
 import styles from "./products.module.css";
 import Link from "next/link";
 import { useFetchData } from "@/hooks/useFetchData";
