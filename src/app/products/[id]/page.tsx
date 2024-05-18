@@ -6,8 +6,7 @@ import api from "@/api/products";
 import styles from "./singleProduct.module.css";
 import Image from "next/image";
 import ProductRating from "@/components/rating/ProductRating";
-import { useFetchData } from "@/hooks/useFetchData";
-
+import Typography from "@mui/material/Typography";
 type ParamsType = {
   params: { id: string };
   searchParams: {};
@@ -107,27 +106,44 @@ const SingleProductPage = ({ params }: ParamsType) => {
       )}
       {product.title && (
         <div className={styles.info}>
-          <h2 className={styles.title}>{product.title}</h2>
+          <Typography
+            variant="h3"
+            sx={{
+              whiteSpace: "nowrap",
+            }}
+            color="primary"
+          >
+            {product.title}
+          </Typography>
 
-          <p className={styles.brand}>{product.brand}</p>
+          <Typography variant="h5" color="primary">
+            {product.brand}
+          </Typography>
+          <Typography variant="h6" color="primary">
+            {product.category}
+          </Typography>
+          <Typography variant="h6" color="primary">
+            {product.description}
+          </Typography>
           <div className={styles.wrapperPrice}>
             {product.discountPercentage ? (
-              <p className={styles.discount}>
+              <Typography variant="h6" color="primary">
                 $
                 {Math.floor(
                   Number(product.price) - Number(product.discountPercentage)
                 )}
-              </p>
+              </Typography>
             ) : (
-              <p className={styles.price}>${product.price}</p>
+              <Typography variant="h6" color="primary">
+                ${product.price}
+              </Typography>
             )}
           </div>
-          <p className={styles.rating}>
-            {product.rating}
+          <Typography variant="h6" color="primary">
             {product.rating && (
               <ProductRating rating={product.rating}></ProductRating>
             )}
-          </p>
+          </Typography>
         </div>
       )}
     </div>

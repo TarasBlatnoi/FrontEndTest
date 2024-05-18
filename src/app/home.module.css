@@ -1,17 +1,20 @@
 .container {
-  display: flex;
+  min-height: 100vh;
   width: 100%;
-  justify-content: center;
-  gap: 100px;
+}
+.mainImgContainer {
+  width: 50%;
+  height: 60vh;
+  position: relative;
 }
 
-.linkProducts {
+.img {
+  border-radius: 5px;
+}
+
+.firstSection {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  border-radius: 10px;
-  width: 40vh;
-  height: 10vh;
-  background-color: gray;
-  color: white;
+  margin-top: 3em;
 }

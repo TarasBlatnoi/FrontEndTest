@@ -11,9 +11,6 @@ const roboto = Roboto({
 
 const theme = createTheme({
   palette: {
-    text: {
-      primary: "#CCC",
-    },
     background: {
       default: grey[200],
     },
@@ -22,6 +19,9 @@ const theme = createTheme({
     },
     secondary: {
       main: grey[50],
+    },
+    text: {
+      primary: grey[50],
     },
   },
   typography: {

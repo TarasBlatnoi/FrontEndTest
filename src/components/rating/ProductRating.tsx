@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./rating.module.css";
+import Typography from "@mui/material/Typography";
 
 type PropsType = {
   rating: number;
@@ -16,8 +17,9 @@ export const ProductRating = ({ rating }: PropsType) => {
   } as React.CSSProperties;
 
   return (
-    <div className={styles.rating}>
-      Reviews
+    <div className={styles.ratingContainer}>
+      <Typography color="primary">Reviews {rating}</Typography>
+
       <div className={styles.starsOuter}>
         <div className={styles.starsInner} style={divStarsInner}></div>
       </div>
