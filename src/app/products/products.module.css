@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 250vh;
+  width: 95%;
+  margin: auto;
+  margin-top: 3em;
+  gap: 8vh;
+}
+
+.productCard {
+  background-color: rgb(59, 59, 59);
+  border-radius: 3%;
+  width: 30%;
+}
+
+@media screen and (max-width: 1100px) {
+  .productCard {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productCard {
+    width: 80%;
+    height: 60vh;
+  }
+  .container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .productCard {
+    width: 90%;
+    height: 60vh;
+  }
+  .container {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh;
+  margin-bottom: 20px;
+}
+
+.img {
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.imgContainer {
+  margin-top: 1em;
+  width: 80%;
+  height: 60%;
+  position: relative;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  height: 18%;
+  margin-top: 1em;
+}
+
+.wrapperPrice {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-bottom: 2em;
+}
+
+.price,
+.discount {
+  margin-right: 1.5em;
+  margin-top: -1em;
+}

@@ -1,0 +1,19 @@
+.ratingContainer {
+  display: flex;
+  align-items: center;
+}
+
+.starsOuter {
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+  margin-left: 0.5em;
+}
+.starsOuter::before {
+  content: "\2606 \2606 \2606 \2606 \2606";
+}
+
+.starsInner::before {
+  content: "\2605 \2605 \2605 \2605 \2605";
+  color: #f8ce0b;
+}
